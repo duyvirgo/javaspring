@@ -15,6 +15,6 @@ public interface BookService {
 	
 	public Book findBookById(Long id);
 
-	Book findBookByIdBook(Long id);
+	public Book findBookByIdBook(Long id);
 	
 }	

@@ -13,7 +13,13 @@ public class Book {
 	private String name;
 
 	private String category;
-
+	
+	private String author;
+	
+	private Long republish;
+	
+	private String publishing_company;
+	
 	public Long getId() {
 		return id;
 	}
@@ -37,5 +43,28 @@ public class Book {
 	public void setCategory(String category) {
 		this.category = category;
 	}
+	
+	public String getAuthor() {
+		return author;
+	}
 
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+
+	public Long getRepublish() {
+		return republish;
+	}
+
+	public void setRepublish(Long republish) {
+		this.republish = republish;
+	}
+
+	public String getPublishing_company() {
+		return publishing_company;
+	}
+
+	public void setPublishing_company(String publishing_company) {
+		this.publishing_company = publishing_company;
+	}
 }

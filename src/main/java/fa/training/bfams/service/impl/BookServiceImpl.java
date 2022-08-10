@@ -27,7 +27,7 @@ public class BookServiceImpl implements BookService{
 
 	@Override
 	public Book editBook(Book book) {
-		Book bookToEdit = findBookById(book.getId());
+		Book bookToEdit = findBookByIdBook(book.getId());
 		
 		if (bookToEdit != null) {
 			return bookRepository.saveAndFlush(book);
@@ -44,12 +44,10 @@ public class BookServiceImpl implements BookService{
 
 	@Override
 	public Book findBookByIdBook(Long id) {
-		return bookRepository.findById(id).get();
+		Book book = bookRepository.findById(id).orElseThrow(()-> new RuntimeException ("Không thể tìm thấy Book với ID này !"));
+		return book;	
 	}
 
-	
-	
-	
 	public BookRepository getBookRepository() {
 		return bookRepository;
 	}

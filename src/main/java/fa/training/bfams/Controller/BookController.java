@@ -33,7 +33,7 @@ public class BookController {
 	
 	@GetMapping(value = "/{id}")
 	public Book findById(@PathVariable("id") Long id) {
-		return bookService.findBookById(id);
+		return bookService.findBookByIdBook(id);
 	}
 	
 	@DeleteMapping(value = "/{id}")
